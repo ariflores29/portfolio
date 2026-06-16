@@ -386,12 +386,14 @@ header {
         max-width: 100%;
 
         & .slider-tools {
-
+            flex-shrink: 0;
+            width: max-content;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: var(--s-xl);
             animation: tools 15s infinite linear;
+            animation: tools 25s infinite linear;
             padding-right: var(--s-xl);
 
 
@@ -414,7 +416,7 @@ header {
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
@@ -900,7 +902,8 @@ footer {
     max-width: 100%;
     background-color: var(--c-gray);
     justify-content: center;
-        align-items: center;
+    align-items: center;
+
     & .footer__content {
         max-width: 100%;
         justify-content: center;
