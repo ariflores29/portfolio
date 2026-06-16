@@ -1086,6 +1086,7 @@ footer {
             & .slider-tools {
                 gap: var(--s-md);
                 flex-shrink: 0;
+                animation: tools 12s infinite linear;
 
                 & img {
                     flex: 0 0 3em;
