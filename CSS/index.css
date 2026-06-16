@@ -381,8 +381,10 @@ header {
         display: flex;
         overflow: hidden;
         width: 100%;
+        max-width: 100%;
 
         & .slider-tools {
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -891,13 +893,21 @@ header {
 /* / PREPHIRE*/
 
 /*Footer*/
-.footer__content {
+footer {
+    display: flex;
+    max-width: 100%;
     background-color: var(--c-gray);
     justify-content: center;
-    align-items: center;
-    gap: var(--s-sm);
-    padding: var(--s-md);
+        align-items: center;
+    & .footer__content {
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: var(--s-sm);
+        padding: var(--s-md);
+    }
 }
+
 
 /* / footer */
 
@@ -956,8 +966,8 @@ header {
         font: var(--f-mobile);
     }
 
-    span{
-        font:var(--f-mobile);
+    span {
+        font: var(--f-mobile);
     }
 
     header {
@@ -1078,17 +1088,15 @@ header {
                     flex: 0 0 3em;
                     height: 3rem;
                     width: auto;
+                    white-space: nowrap;
+                    object-fit: contain;
+
                 }
 
             }
 
 
         }
-    }
-
-    @keyframes tools {
-        from { transform: translateX(0); }
-        to { transform: translateX(-50%); }
     }
 
     .design {
