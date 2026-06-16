@@ -961,7 +961,6 @@ header {
     }
 
     header {
-
         & .open-menu {
             display: block;
             font-size: 2rem;
@@ -1085,6 +1084,11 @@ header {
 
 
         }
+    }
+
+    @keyframes tools {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
     }
 
     .design {
