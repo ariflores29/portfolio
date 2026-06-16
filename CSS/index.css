@@ -1069,7 +1069,7 @@ header {
         & .tools {
 
             & .slider-tools {
-
+                gap: var(--s-md);
 
                 & img {
                     flex: 0 0 3em;
