@@ -448,7 +448,7 @@ header {
             & span {
                 background-color: var(--c-orange);
                 color: var(--c-white);
-                font: var(--f-body);
+                font: var(--f-span);
                 padding: var(--s-xs) var(--s-sm);
                 border-radius: var(--r-xl);
             }
@@ -620,7 +620,7 @@ header {
             & span {
                 background-color: var(--c-garnet);
                 color: var(--c-white);
-                font: var(--f-body);
+                font: var(--f-span);
                 padding: var(--s-xs) var(--s-sm);
                 border-radius: var(--r-xl);
             }
@@ -655,7 +655,7 @@ header {
             & span {
                 background-color: var(--c-blue);
                 color: var(--c-white);
-                font: var(--f-body);
+                font: var(--f-span);
                 padding: var(--s-xs) var(--s-sm);
                 border-radius: var(--r-xl);
             }
@@ -954,6 +954,10 @@ header {
 
     p {
         font: var(--f-mobile);
+    }
+
+    span{
+        font:var(--f-mobile);
     }
 
     header {
