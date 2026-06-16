@@ -365,11 +365,11 @@ header {
 
 @keyframes skills {
     from {
-        transform: translateX(-100%);
+        translate:-100%;
     }
 
     to {
-        transform: translateX(0);
+        translate:0;
     }
 }
 
@@ -409,11 +409,11 @@ header {
 
 @keyframes tools {
     from {
-        transform: translateX(0);
+       translate:0;
     }
 
     to {
-        transform: translateX(-100%);
+       translate:-100%;
     }
 }
 
