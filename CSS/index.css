@@ -79,6 +79,7 @@ html {
     --f-link: 500 1.25em "inter", sans-serif;
     --f-btn: 500 1.25em "inter", sans-serif;
     --f-span: 300 1em "inter", sans-serif;
+    --f-mobile: 400 0.85em "inter", sans-serif;
     /* / Fuentes*/
 
     /*Colores*/
@@ -184,10 +185,10 @@ header {
                     transition: transform .25s ease, color .25s ease;
 
                     &:hover {
-                       
+
                         transform: translateY(-2px);
                         color: var(--c-menu);
-                    
+
                     }
                 }
 
@@ -944,11 +945,15 @@ header {
 
 @media (max-width: 1024px) {
     section {
-        padding: var(--s-md);
+        padding: var(--s-sm);
     }
 
     h1 {
         font: 1.85rem;
+    }
+
+    p {
+        font: var(--f-mobile);
     }
 
     header {
@@ -1034,6 +1039,47 @@ header {
                     }
                 }
             }
+        }
+    }
+
+    .characteristics {
+        padding: var(--s-sm);
+    }
+
+    .skills-section {
+
+        .sliders {
+
+            & .skills {
+
+                & span {
+                    background-color: var(--c-gray);
+                    padding: var(--s-sm) var(--s-sm);
+                    border-radius: var(--r-xl);
+                    font: var(--f-mobile);
+                    white-space: nowrap;
+                }
+            }
+
+        }
+    }
+
+    .tools-section {
+
+        & .tools {
+
+            & .slider-tools {
+
+
+                & img {
+                    flex: 0 0 3em;
+                    height: 3rem;
+                    width: auto;
+                }
+
+            }
+
+
         }
     }
 
