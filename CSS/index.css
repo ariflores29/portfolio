@@ -386,13 +386,10 @@ header {
         max-width: 100%;
 
         & .slider-tools {
-            flex-shrink: 0;
-            width: max-content;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: var(--s-xl);
-            animation: tools 15s infinite linear;
             animation: tools 25s infinite linear;
             padding-right: var(--s-xl);
 
@@ -1091,7 +1088,6 @@ footer {
                 flex-shrink: 0;
 
                 & img {
-                    display: block;
                     flex: 0 0 3em;
                     height: 3rem;
                     width: auto;
