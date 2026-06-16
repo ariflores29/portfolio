@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Ariana Flores — Diseñadora UX/UI & Front-end">
+    <meta property="og:description"
+        content="Portfolio de Ariana Flores, diseñadora UX/UI y desarrolladora front-end junior.">
+    <meta property="og:image" content="https://tu-dominio.com/media/og-image.jpg">
+    <meta property="og:url" content="https://portfolioariflores.com">
+    <meta property="og:type" content="website">
+    <title>PORTFOLIO ARIANA FLORES</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <script defer src="js/index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Header-->
+    <header class="flex-row">
+        <a href="#inicio">
+            <img src="media/LOGO PORTFOLIO.svg" alt="Logotipo Portfolio" class="logo">
+        </a>
+        <a href="#" class="open-menu" id="open"><i class="ri-menu-5-line"></i></a>
+        <nav id="burger-nav">
+            <a href="#" class="close-menu" id="close"><i class="ri-close-large-line"></i></a>
+            <ul>
+                <li>
+                    <a href="#proyectos" title="proyectos">Proyectos</a>
+                </li>
+
+                <li>
+                    <a href="#sobre-mi" title="sobre-mi">Sobre mi</a>
+                </li>
+
+                <li>
+                    <a href="#contacto" title="contacto">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- / Header-->
+    <main>
+        <!--BANNER-->
+        <section class="reveal">
+            <div class="banner__background">
+                <!--Contenido banner-->
+                <div class="banner__content flex-column">
+                    <h1>Diseñadora UX/UI & front-end junior</h1>
+                    <p>¡Hola!, soy Ariana Flores una apasionada de crear experiencias digitales increibles a la
+                        vez que intuitivas.</p>
+                </div>
+                <!-- / Contenido banner-->
+            </div>
+        </section>
+        <!--BANNER-->
+
+        <!--PROYECTOS-->
+        <section id="proyectos" class="reveal">
+            <div class="projects flex-column">
+                <h2>PROYECTOS</h2>
+                <hr>
+                <div class="projects__cards">
+                    <div class="project__card flex-column">
+                        <picture>
+                            <source src="MEDIA/xenxos.webp" type="image/webp">
+                            <img src="MEDIA/xenxos.png" alt="proyecto-xenxos" loading=lazy>
+                        </picture>
+                        <a href="xenxos.html" target="_blank" rel="noreferrer noopener">PIZZERIA & ASADOR XENXO'S</a>
+                        <span>Diseño web & Desarrollo web</span>
+                        <a href="xenxos.html" class="btn__project" target="_blank" rel="noreferrer noopener">Ver
+                            proyecto</a>
+                    </div>
+
+                    <div class="project__card flex-column">
+                        <video autoplay muted loop playsinline class="video" poster="MEDIA/inicio-tonys.webp">
+                            <source src="MEDIA/tonys.mp4" type="video/mp4">
+                        </video>
+                        <a href="tonys.html" target="_blank" rel="noreferrer noopener">RESTAURANTE TONY'S
+                            EMPURIABRAVA</a>
+                        <span>Diseño web & Desarrollo web</span>
+                        <a href="tonys.html" class="btn__project" target="_blank" rel="noreferrer noopener">Ver
+                            proyecto</a>
+                    </div>
+
+                    <div class="project__card flex-column">
+                        <picture>
+                            <source src="app.webp" type="image/webp">
+                            <img src="MEDIA/app.png" alt="app-entrevistas" loading=lazy>
+                        </picture>
+                        <a href="prephire.html" target="_blank" rel="noreferrer noopener">PREPHIRE - PREPARA TUS
+                            ENTREVISTAS</a>
+                        <span>Diseño App · UX/UI</span>
+                        <a href="prephire.html" class="btn__project" target="_blank" rel="noreferrer noopener">Ver
+                            proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- / PROYECTOS-->
+
+        <!--SOBRE MÍ-->
+        <section id="sobre-mi" class="reveal">
+            <h2 class="title">SOBRE MÍ</h2>
+            <hr>
+            <div class="characteristics flex-row">
+                <!-- Etiquetas izquierda -->
+                <picture>
+                    <source src="sobre_mi.webp" type="image/webp">
+                    <img src="MEDIA/sobre_mi.png" alt="foto-perfil" loading=lazy class="foto">
+                </picture>
+                <div class="content flex-column">
+                    <h3>Ariana Flores</h3>
+                    <p>Soy diseñadora UX/UI y desarrollo interfaces con HTML, CSS y JavaScript. Cada proyecto es un reto: construir experiencias claras, útiles y estéticas, sin perder de vista que detrás siempre hay una persona con una necesidad real.</p>
+
+                    <p>Me fijo mucho en los detalles y en cómo se comporta cada elemento, porque para mí una buena interfaz no es solo la que se ve bien, sino la que funciona de verdad y resuelve lo que el usuario necesita sin complicaciones.</p>
+                </div>
+            </div>
+
+        </section>
+        <!-- / SOBRE MÍ-->
+
+        <!--SKILLS-->
+        <section class="skills-section reveal">
+            <div class="sliders">
+                <div class="skills">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                    <span>HTML</span>
+                    <span>DESIGN SYSTEM</span>
+                    <span>WIREFRAMING</span>
+                    <span>PROTOTIPADO</span>
+                    <span>RESPONSIVE DESIGN</span>
+                </div>
+                <div class="skills">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                    <span>HTML</span>
+                    <span>DESIGN SYSTEM</span>
+                    <span>WIREFRAMING</span>
+                    <span>PROTOTIPADO</span>
+                    <span>RESPONSIVE DESIGN</span>
+                </div>
+            </div>
+        </section>
+        <!-- / SKILLS-->
+
+        <!--HERRAMIENTAS-->
+        <section class="tools-section reveal">
+            <div class="tools">
+                <div class="slider-tools ">
+                    <img src="MEDIA/logo-figma.png" alt="figma" loading="lazy">
+                    <img src="MEDIA/wordpress.webp" alt="wordpress" loading="lazy">
+                    <img src="MEDIA/elementor.png" alt="elementor" loading="lazy">
+                    <img src="MEDIA/visual-studio-code.png" alt="visual-studio-code" loading="lazy">
+                    <img src="MEDIA/github.png" alt="github" loading="lazy">
+                    <img src="MEDIA/Photoshop.png" alt="photoshop" loading="lazy">
+                    <img src="MEDIA/ilustrator.png" alt="ilustrator" loading="lazy">
+                    <img src="MEDIA/canva.png" alt="canva" loading="lazy">
+                    <img src="MEDIA/capcut.png" alt="capcut" loading="lazy">
+                </div>
+
+                <div class="slider-tools">
+                    <img src="MEDIA/logo-figma.png" alt="figma" loading="lazy">
+                    <img src="MEDIA/wordpress.webp" alt="wordpress" loading="lazy">
+                    <img src="MEDIA/elementor.png" alt="elementor" loading="lazy">
+                    <img src="MEDIA/visual-studio-code.png" alt="visual-studio-code" loading="lazy">
+                    <img src="MEDIA/github.png" alt="github" loading="lazy">
+                    <img src="MEDIA/Photoshop.png" alt="photoshop" loading="lazy">
+                    <img src="MEDIA/ilustrator.png" alt="ilustrator" loading="lazy">
+                    <img src="MEDIA/canva.png" alt="canva" loading="lazy">
+                    <img src="MEDIA/capcut.png" alt="capcut" loading="lazy">
+                </div>
+            </div>
+        </section>
+        <!-- / HERRAMIENTAS-->
+    </main>
+    <!--PIE DE PÁGINA-->
+    <footer>
+        <div id="contacto" class="footer__content flex-column">
+            <h2>CONTACTO</h2>
+            <h3>Ariana Flores</h3>
+            <a href="mailto:studioariflores@gmail.com">studioariflores@gmail.com</a>
+            <a href="tel:+34642588174">+34 642 58 81 74</a>
+            <p>© 2026 Ariana Flores</p>
+        </div>
+    </footer>
+    <!-- / PIE DE PÁGINA-->
+</body>
+
+</html>
