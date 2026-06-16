@@ -1100,6 +1100,10 @@ footer {
 
         }
     }
+    @keyframes tools {
+        from { translate: 0; }
+        to { translate: -50%; }
+    }
 
     .design {
         & .design-content {
