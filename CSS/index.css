@@ -361,13 +361,15 @@ header {
     }
 }
 
+
+
 @keyframes skills {
     from {
-        translate: -100%;
+        transform: translateX(-100%);
     }
 
     to {
-        translate: 0;
+        transform: translateX(0);
     }
 }
 
@@ -389,7 +391,7 @@ header {
             align-items: center;
             justify-content: center;
             gap: var(--s-xl);
-            animation: tools 25s infinite linear;
+            animation: tools 15s infinite linear;
             padding-right: var(--s-xl);
 
 
@@ -408,11 +410,11 @@ header {
 
 @keyframes tools {
     from {
-        translate: 0;
+        transform: translateX(0);
     }
 
     to {
-        translate: -100%;
+        transform: translateX(-50%);
     }
 }
 
@@ -1083,12 +1085,13 @@ footer {
 
             & .slider-tools {
                 gap: var(--s-md);
+                flex-shrink: 0;
 
                 & img {
+                    display: block;
                     flex: 0 0 3em;
                     height: 3rem;
                     width: auto;
-                    white-space: nowrap;
                     object-fit: contain;
 
                 }
