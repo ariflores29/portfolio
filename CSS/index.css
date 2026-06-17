@@ -75,11 +75,11 @@ html {
     /*Fuentes*/
     --f-xl: 500 clamp(2rem, 6vw, 5rem) "instrument serif", sans-serif;
     --f-l: 500 2.30em "inter", sans-serif;
-    --f-body: 400 1.25em "inter", sans-serif;
+    --f-body: 400 1.25rem "inter", sans-serif;
     --f-link: 500 1.25em "inter", sans-serif;
     --f-btn: 500 1.25em "inter", sans-serif;
     --f-span: 300 1em "inter", sans-serif;
-    --f-mobile: 400 0.85em "inter", sans-serif;
+    --f-mobile: 400 0.95em "inter", sans-serif;
     /* / Fuentes*/
 
     /*Colores*/
@@ -965,7 +965,7 @@ footer {
         font: 1.85rem;
     }
 
-    p {
+    p{
         font: var(--f-mobile);
         line-height: 1.6;
     }
