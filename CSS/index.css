@@ -323,6 +323,7 @@ header {
             font: var(--f-xl);
         }
 
+
     }
 
 
@@ -353,7 +354,7 @@ header {
                 background-color: var(--c-gray);
                 padding: var(--s-sm) var(--s-md);
                 border-radius: var(--r-xl);
-                font: var(--f-body);
+                font: var(--f-span);
                 white-space: nowrap;
             }
         }
@@ -966,6 +967,7 @@ footer {
 
     p {
         font: var(--f-mobile);
+        line-height: 1.6;
     }
 
     span {
