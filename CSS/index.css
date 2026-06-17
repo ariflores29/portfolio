@@ -365,59 +365,59 @@ header {
 
 @keyframes skills {
     from {
-        translate:-100%;
+        translate: -100%;
     }
 
     to {
-        translate:0;
+        translate: 0;
     }
 }
 
 /* / skills*/
 
-/*tools*/
+
+/*SLIDER TOOLS*/
+
 .tools-section {
     padding-top: 0;
 
     & .tools {
-        display: flex;
         overflow: hidden;
         width: 100%;
-        max-width: 100%;
 
-        & .slider-tools {
+        & .slider-track {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--s-xl);
-            animation: tools 25s infinite linear;
-            padding-right: var(--s-xl);
+            width: max-content;
+            animation: tools 15s infinite linear;
+            will-change: transform;
 
+            & .slider-tools {
+                display: flex;
+                align-items: center;
+                gap: var(--s-xl);
+                padding-right: 3rem;
+                flex-shrink: 0;
 
-            & img {
-                flex: 0 0 5em;
-                height: 5rem;
-                width: auto;
+                & img {
+                    height: 5rem;
+                    width: auto;
+                    object-fit: contain;
+                    flex-shrink: 0;
+                }
             }
-
         }
-
-
     }
 }
-
 
 @keyframes tools {
     from {
-       translate:0;
+        transform: translateX(0);
     }
 
     to {
-       translate:-100%;
+        transform: translateX(-50%);
     }
 }
-
-/* / skills*/
 
 /* INDEX HTML*/
 
@@ -1080,30 +1080,20 @@ footer {
     }
 
     .tools-section {
-
         & .tools {
+            & .slider-track {
+                & .slider-tools {
+                    gap: 2rem;
+                    padding-right: 2rem;
 
-            & .slider-tools {
-                gap: var(--s-md);
-                flex-shrink: 0;
-                animation: tools 12s infinite linear;
-
-                & img {
-                    flex: 0 0 3em;
-                    height: 3rem;
-                    width: auto;
-                    object-fit: contain;
-
+                    & img {
+                        height: 2.5rem;
+                    }
                 }
-
             }
 
-
         }
-    }
-    @keyframes tools {
-        from { translate: 0; }
-        to { translate: -50%; }
+
     }
 
     .design {
@@ -1149,4 +1139,6 @@ footer {
 
         }
     }
+
+
 }
