@@ -1,84 +1,144 @@
-// Seleccionamos el contenedor de imágenes
+/* ==========================================================================
+   SELECTORES GENERALES
+   ========================================================================== */
+ 
+// Contenedor de imágenes arrastrable (proyectos)
 const slider = document.querySelector('.screen__images');
 const reveals = document.querySelectorAll('#proyectos .reveal');
-
-//Menú hamburguesa
-const openBtn = document.getElementById("open");
-const closeBtn = document.getElementById("close");
-const burgerNav = document.getElementById("burger-nav");
-const links = burgerNav.querySelectorAll("a");
-
-//constantes de animaciones de entrada
-const elements = document.querySelectorAll(".reveal");
-//constantes de animaciones de entrada
-
-openBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    burgerNav.classList.add("active");
-});
-
-closeBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    burgerNav.classList.remove("active");
-});
-
-
-links.forEach(link => {
-    link.addEventListener("click", () => {
-        burgerNav.classList.remove("active");
-    });
-});
-
+ 
 // Menú hamburguesa
-
-// Animaciones de entrada del contenido
-
+const openBtn = document.getElementById('open');
+const closeBtn = document.getElementById('close');
+const burgerNav = document.getElementById('burger-nav');
+const links = burgerNav ? burgerNav.querySelectorAll('a') : [];
+ 
+// Elementos con animación de entrada al hacer scroll
+const elements = document.querySelectorAll('.reveal');
+ 
+ 
+/* ==========================================================================
+   MENÚ HAMBURGUESA
+   ========================================================================== */
+ 
+if (openBtn && closeBtn && burgerNav) {
+    openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        burgerNav.classList.add('active');
+    });
+ 
+    closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        burgerNav.classList.remove('active');
+    });
+ 
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            burgerNav.classList.remove('active');
+        });
+    });
+}
+ 
+ 
+/* ==========================================================================
+   ANIMACIONES DE ENTRADA (scroll reveal)
+   ========================================================================== */
+ 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("active");
+            entry.target.classList.add('active');
         }
     });
 }, {
     threshold: 0.2
 });
-
+ 
 elements.forEach(el => observer.observe(el));
-// Animaciones de entrada del contenido
-// Variables que guardan el estado del arrastre
-let isDown = false;    // ¿está el botón del ratón pulsado?
-let startX;            // posición X donde empezó el clic
-let scrollLeft;        // cuánto estaba scrolleado el contenedor al empezar
+ 
+ 
+/* ==========================================================================
+   SLIDER ARRASTRABLE (proyectos)
+   ========================================================================== */
+ 
+// Solo ejecutamos este bloque si el slider existe en la página
+if (slider) {
+ 
+    // Variables que guardan el estado del arrastre
+    let isDown = false;    // ¿está el botón del ratón pulsado?
+    let startX;            // posición X donde empezó el clic
+    let scrollLeft;        // cuánto estaba scrolleado el contenedor al empezar
+ 
+    // El usuario pulsa el botón del ratón
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.style.cursor = 'grabbing';
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+ 
+    // El ratón sale del contenedor sin soltar
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.style.cursor = 'grab';
+    });
+ 
+    // El usuario suelta el botón del ratón
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.style.cursor = 'grab';
+    });
+ 
+    // El ratón se mueve (esto hace el scroll real)
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        slider.scrollLeft = scrollLeft - walk;
+    });
+}
+ 
+ 
+/* ==========================================================================
+   BANNER — REVELAR COLOR ALREDEDOR DEL CURSOR (foco que sigue al ratón)
+ 
+   No pinta ni deja rastro: el color solo se ve en un círculo pequeño
+   justo donde está el cursor. Al mover el ratón a otra zona, la anterior
+   vuelve automáticamente a blanco y negro.
+ 
+   Requiere en el HTML, dentro de <div class="banner" id="banner">:
+     <picture><img class="img-bw" src="..." alt="..."></picture>
+     <picture><img class="img-color" src="..." alt="..."></picture>
+ 
+   Todo el efecto visual (círculo, blanco y negro, transición) lo hace
+   el CSS con mask-image; este JS solo actualiza la posición del cursor
+   en las variables --x / --y.
+   ========================================================================== */
+ 
+const banner = document.getElementById('banner');
+ 
+if (banner) {
+    function updateMask(x, y) {
+        const rect = banner.getBoundingClientRect();
+        const px = ((x - rect.left) / rect.width) * 100;
+        const py = ((y - rect.top) / rect.height) * 100;
+        banner.style.setProperty('--x', px + '%');
+        banner.style.setProperty('--y', py + '%');
+    }
 
-// EVENTO 1: el usuario pulsa el botón del ratón
-slider.addEventListener('mousedown', (e) => {
-    isDown = true;                              // activamos el modo arrastre
-    slider.style.cursor = 'grabbing';          // cambiamos el cursor a "agarrando"
-    startX = e.pageX - slider.offsetLeft;      // guardamos la posición X del clic, restando el desplazamiento del propio contenedor para obtener coordenadas relativas
-    scrollLeft = slider.scrollLeft;            // guardamos cuánto scroll llevaba el contenedor en ese momento
-});
+    // Ratón (escritorio)
+    banner.addEventListener('mousemove', (e) => updateMask(e.clientX, e.clientY));
 
-// EVENTO 2: el ratón sale del contenedor sin soltar
-slider.addEventListener('mouseleave', () => {
-    isDown = false;                            // desactivamos el arrastre para que no se quede "pegado"
-    slider.style.cursor = 'grab';             // volvemos al cursor normal
-});
+    // Táctil (móvil)
+    banner.addEventListener('touchmove', (e) => {
+        const touch = e.touches[0];
+        updateMask(touch.clientX, touch.clientY);
+        banner.classList.add('is-active');
+    });
 
-// EVENTO 3: el usuario suelta el botón del ratón
-slider.addEventListener('mouseup', () => {
-    isDown = false;                            // desactivamos el arrastre
-    slider.style.cursor = 'grab';             // volvemos al cursor normal
-});
-
-// EVENTO 4: el ratón se mueve (este es el que hace el scroll real)
-slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;                       // si no estamos arrastrando, ignoramos el movimiento
-    e.preventDefault();                        // evitamos comportamientos por defecto del navegador (como seleccionar texto)
-    const x = e.pageX - slider.offsetLeft;    // posición X actual del ratón, relativa al contenedor
-    const walk = (x - startX) * 1.5;         // calculamos cuánto se ha movido el ratón desde el inicio (multiplicado por 1.5 para dar velocidad)
-    slider.scrollLeft = scrollLeft - walk;    // aplicamos el desplazamiento al scroll: restamos porque arrastrar a la derecha debe mostrar contenido de la derecha
-});
-
-
-// animaciones de entrada
+    banner.addEventListener('touchend', () => {
+        banner.classList.remove('is-active');
+    });
+}
+//foto-gris-color
 

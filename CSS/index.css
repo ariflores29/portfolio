@@ -73,9 +73,9 @@ html {
 :root {
 
     /*Fuentes*/
-    --f-xl: 500 clamp(2rem, 6vw, 5rem) "instrument serif", sans-serif;
+    --f-xl: 500 clamp(3rem, 6vw, 5rem) "instrument serif", sans-serif;
     --f-l: 500 2.30em "inter", sans-serif;
-    --f-body: 400 1.25rem "inter", sans-serif;
+    --f-body: 400 1.30rem "inter", sans-serif;
     --f-link: 500 1.25em "inter", sans-serif;
     --f-btn: 500 1.25em "inter", sans-serif;
     --f-span: 300 1em "inter", sans-serif;
@@ -144,15 +144,16 @@ html {
     background: linear-gradient(to top, rgb(252, 204, 220), transparent);
 }
 
-.btn__cv:hover{
+.btn__cv:hover {
     transform: scale(0.96);
     box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.btn__cv:active{
+.btn__cv:active {
     transform: scale(0.96);
     box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
 }
+
 
 /*/ HOVER & ACTIVE*/
 /*INDEX HTML*/
@@ -219,10 +220,10 @@ header {
 .banner__background {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     max-width: 100%;
-    padding: var(--s-l);
+    padding: var(--s-md);
     background: radial-gradient(ellipse at center,
             #f8d3dc 0%,
             #ffe2e9 35%,
@@ -230,20 +231,78 @@ header {
             #fdf4f0 100%);
     border-radius: var(--r-sm);
     box-shadow: inset 0 4px 16.6px -6px rgba(0, 0, 0, 0.25);
-    gap: var(--s-sm);
+    gap: var(--s-md);
 
     & .banner__content {
-
+        flex: 1 1 50%;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: start;
         justify-content: center;
-        max-width: 100%;
+        padding-left: var(--s-l);
+        max-width: 50%;
         gap: var(--s-md);
+
+        & p {
+            font-size: 25px;
+        }
+
+        & .btn__cv {
+            background-color: var(--c-gray);
+            align-self: flex-start;
+            padding: var(--s-sm) var(--s-md);
+            border-radius: var(--r-xl);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+        }
 
 
     }
 
+    & .banner {
+
+        position: relative;
+        flex: 1;
+        min-width: 280px;
+        max-width: 650px;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        border-radius: var(--r-sm);
+
+        & picture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+
+        & .img-bw {
+            filter: grayscale(100%) contrast(1.05);
+        }
+
+        & .img-color {
+            -webkit-mask-image: radial-gradient(circle 180px at var(--x, 50%) var(--y, 50%), black 0%, transparent 100%);
+            mask-image: radial-gradient(circle 180px at var(--x, 50%) var(--y, 50%), black 75%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+
+
+        &:hover .img-color {
+            opacity: 1;
+        }
+    }
 }
+
 
 /* / BANNER*/
 
@@ -333,13 +392,13 @@ header {
             font: var(--f-xl);
         }
 
-        & .btn__cv{
+        & .btn__cv {
             background-color: var(--c-gray);
             align-self: flex-start;
             padding: var(--s-sm) var(--s-md);
             border-radius: var(--r-xl);
             transition: transform 0.15s ease, box-shadow 0.15s ease;
-            
+
         }
 
     }
@@ -983,7 +1042,7 @@ footer {
         font: 1.85rem;
     }
 
-    p{
+    p {
         font: var(--f-mobile);
         line-height: 1.6;
     }
@@ -1074,6 +1133,16 @@ footer {
                     }
                 }
             }
+        }
+    }
+
+    .banner__background {
+
+        & .banner__content,
+        & .banner {
+            flex: 1 1 100%;
+            max-width: 100%;
+            padding: 0;
         }
     }
 
