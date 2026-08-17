@@ -44,26 +44,40 @@
         <!--BANNER-->
         <section class="reveal">
             <div class="banner__background flex-row">
-                <!--Contenido banner-->
+                <!-- Contenido banner -->
                 <div class="banner__content flex-column">
                     <h1>¡Hola!, soy Ariana Flores - Diseñadora Web & UX/UI</h1>
-                    <p>Soy una apasionada de crear experiencias digitales que dan vida y color a tu negocio. </p>
+                    <p>Soy una apasionada de crear experiencias digitales que dan vida y color a tu negocio.</p>
                     <a href="#proyectos" class="btn__cv" target="_blank">Ver trabajos</a>
-                    
                 </div>
 
                 <div class="banner" id="banner">
-                    <picture>
-                        <source srcset="MEDIA/foto-banner-color.webp" type="image/webp">
-                        <img class="img-bw" src="MEDIA/foto-banner-color.png" alt="foto banner">
-                    </picture>
 
-                    <picture>
-                        <source srcset="MEDIA/foto-banner-color.webp" type="image/webp">
-                        <img class="img-color" src="MEDIA/foto-banner-color.png" alt="foto banner">
-                    </picture>
+                    <div class="banner__photo">
+                        <picture>
+                            <source srcset="MEDIA/foto-banner-color.webp" type="image/webp">
+                            <img class="img-bw" src="MEDIA/foto-banner-color.png" alt="foto banner">
+                        </picture>
+
+                        <picture>
+                            <source srcset="MEDIA/foto-banner-color.webp" type="image/webp">
+                            <img class="img-color" src="MEDIA/foto-banner-color.png" alt="foto banner">
+                        </picture>
+                    </div>
+
+                    <svg class="banner__circle-text" viewBox="0 0 200 200">
+                        <defs>
+                            <path id="circlePath" d="M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" />
+                        </defs>
+                        <text>
+                            <textPath href="#circlePath" startOffset="0%">
+                                DISEÑO WEB • UX/UI • FRONT-END • SEO • DISEÑO WEB • UX/UI • FRONT-END •  SEO
+                            </textPath>
+                        </text>
+                    </svg>
+
                 </div>
-                <!-- / Contenido banner-->
+                <!-- / Contenido banner -->
             </div>
         </section>
         <!--BANNER-->
@@ -71,14 +85,14 @@
         <!--PROYECTOS-->
         <section id="proyectos" class="reveal">
             <div class="projects flex-column">
-                <h2>PROYECTOS</h2>
+                <h2>Proyectos</h2>
                 <hr>
                 <div class="projects__cards">
 
                     <div class="project__card flex-column">
                         <picture>
-                            <source src="app.webp" type="image/webp">
-                            <img src="MEDIA/app.png" alt="app-entrevistas" loading=lazy>
+                            <source src="MEDIA/portada-prephire.webp" type="image/webp">
+                            <img src="MEDIA/portada-prephire.png" alt="app-entrevistas" loading=lazy>
                         </picture>
                         <a href="prephire.html" target="_blank" rel="noreferrer noopener">PREPHIRE - PREPARA TUS
                             ENTREVISTAS</a>
@@ -115,7 +129,7 @@
 
         <!--SOBRE MÍ-->
         <section id="sobre-mi" class="reveal">
-            <h2 class="title">SOBRE MÍ</h2>
+            <h2 class="title">Sobre mí</h2>
             <hr>
             <div class="characteristics flex-row">
                 <!-- Etiquetas izquierda -->

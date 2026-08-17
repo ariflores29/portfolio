@@ -223,7 +223,7 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 100%;
-    padding: var(--s-md);
+    padding: var(--s-l);
     background: radial-gradient(ellipse at center,
             #f8d3dc 0%,
             #ffe2e9 35%,
@@ -259,7 +259,6 @@ header {
     }
 
     & .banner {
-
         position: relative;
         flex: 1;
         min-width: 280px;
@@ -267,14 +266,20 @@ header {
         aspect-ratio: 1 / 1;
         overflow: hidden;
         border-radius: var(--r-sm);
+        display: flex;
+       
 
         & picture {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: block;
+        top: 50%;
+        left: 50%;
+        width: 75%;
+        height: 75%;
+        transform: translate(-50%, -50%);
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+
 
             & img {
                 width: 100%;
@@ -300,9 +305,37 @@ header {
         &:hover .img-color {
             opacity: 1;
         }
+
+        & .banner__circle-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 110%;
+            height: 110%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            animation: rotateText 20s linear infinite;
+
+            & text {
+                font-size: 9px;
+                letter-spacing: 2px;
+                fill: var(--color-texto, #333);
+                text-transform: uppercase;
+            }
+        }
+
     }
 }
 
+@keyframes rotateText {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
 
 /* / BANNER*/
 
