@@ -106,12 +106,21 @@
         </section>
         <!--  / PROBLEMA QUE RESUELVE-->
 
+        <nav class="project-subnav" aria-label="Secciones del proyecto">
+            <ul class="project-subnav__list flex-row">
+                <li><a href="#investigacion">Investigación</a></li>
+                <li><a href="#definicion">Definición</a></li>
+                <li><a href="#ideacion">Ideación</a></li>
+                <li><a href="#diseño">Diseño</a></li>
+                <li><a href="#resultado" class="project-subnav__cta">Ver resultado</a></li>
+            </ul>
+        </nav>
 
 
         <!--INVESTIGACIÓN-->
 
         <section class="reveal">
-            <div class="components  flex-column">
+            <div class="components  flex-column" id="investigacion">
                 <div class="components-content flex-row">
 
 
@@ -195,7 +204,7 @@
         <!--DEFINICIÓN-->
 
         <section class="reveal">
-            <div class="components flex-column">
+            <div class="components flex-column" id="definicion">
                 <div class="content__reverse  flex-row">
 
                     <div class="components-image flex-column">
@@ -251,7 +260,7 @@
         <!--IDEACIÓN-->
 
         <section class="reveal">
-            <div class="components flex-column">
+            <div class="components flex-column" id="ideacion">
                 <div class="components-content flex-row">
 
 
@@ -390,9 +399,8 @@
         <!--DISEÑO FINAL-->
 
         <section class="reveal">
-            <div class="design flex-column">
+            <div class="design flex-column" id="diseño">
                 <div class="design-content flex-row">
-
 
                     <div class="design-info flex-column">
                         <div class="title flex-column">
@@ -415,14 +423,14 @@
 
                     </div>
 
-                    <div class="design-image flex-column">
-                        <div class="design__image flex-row">
-                            <picture>
-                                <source src="MEDIA/diseño-final.webp" type="image/webp">
-                                <img src="MEDIA/diseño-final.jpeg" alt="diseño final">
-                            </picture>
-                        </div>
+
+                    <div class="design__image flex-row">
+                        <picture>
+                            <source src="MEDIA/diseño-onboarding.webp" type="image/webp">
+                            <img src="MEDIA/diseño-onboarding.png" alt="diseño final">
+                        </picture>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -433,24 +441,30 @@
         <!--WIREFRAMES-->
         <section class="reveal">
             <div class="wireframes flex-column">
-                <div class="wireframes-content flex-row">
+                <div class="wireframes-content flex-column">
 
-                    <div class="wireframes-image flex-column">
-                        <picture>
-                            <source src="MEDIA/wireframes.webp" type="image/webp">
-                            <img src="MEDIA/wireframes.png" alt="wireframes">
-                        </picture>
+                    <div class="title flex-column">
+                        <span>Fase de diseño</span>
+                        <h2>Wireframes</h2>
                     </div>
 
                     <div class="wireframes-info flex-column">
-                        <h2>WIREFRAMING</h2>
                         <p>
-                            Antes de iniciar con el diseño visual, desarrollé los wireframes para poder validar la
-                            estructura y los flujos de la app. Definí la jerarquía de contenido, la navegación principal
-                            y la disposición de los elementos clave en cada pantalla. Este paso me ayudó a poder llegar
-                            al diseño visual con una base sólida y validada.
+                            Una vez definida correctamente la arquitectura de la información y los principales flujos de
+                            navegación, desarrollé los wireframes de media fidelidad de la aplicación. Estos me
+                            permitieron establecer la estructura, jerarquía y distribución de los diferentes elementos
+                            de cada pantalla antes de aplicar el diseño final.
                         </p>
                     </div>
+
+                    <div class="wireframes-image">
+                        <picture>
+                            <source src="MEDIA/wireframes.webp" type="image/webp">
+                            <img src="MEDIA/wireframes.jpeg" alt="wireframes">
+                        </picture>
+                    </div>
+
+
 
                 </div>
             </div>
@@ -460,20 +474,18 @@
         <!--IDENTIDAD-->
         <section class="reveal">
             <div class="identidad flex-column">
-                <h2>IDENTIDAD</h2>
-                <p>El icono que forma parte del logotipo representa de forma abstracta a dos personas frente a frente,
-                    simbolizando lo que es una entrevista. A su vez, forma una pieza de puzzle a la que le falta la
-                    parte superior, lo que sugiere que falta una parte esencial: la conexión entre quien contrata y la
-                    persona entrevistada. Esto ayuda a reflejar el objetivo de la marca, que es poder conseguir esa
-                    conexión con nosotros.
-                </p>
 
-                <p>
-                    El nombre Prephire, que forma parte del logotipo, surge de la fusión de dos verbos en inglés:
-                    Prepare (preparar) y hire (contratar). Esta combinación refleja la esencia de la marca: acompañar a
-                    los usuarios en el proceso de preparación para que puedan alcanzar su objetivo final, ser
-                    contratados.
-                </p>
+                <div class="title flex-column">
+                    <span>Fase de diseño</span>
+                    <h2>Foundations</h2>
+                </div>
+                <div class="foundations-info flex-column">
+                    <p>
+                        Se ha buscado transmitir una imagen moderna, fiable y profesional. De modo que el usuario
+                        perciba la aplicación como actualizada y se sienta immerso en un entorno serio y profesional,
+                        acorde con el escenario de una entrevista.
+                    </p>
+                </div>
 
                 <div class="logos flex-row">
                     <picture>
@@ -489,6 +501,11 @@
                         <img src="MEDIA/variacion-logo-blanco.png" alt="logo blanco">
                     </picture>
                 </div>
+
+                <picture>
+                    <source src="MEDIA/foundations.webp" type="image/webp">
+                    <img src="MEDIA/foundations.jpeg" alt="logo blanco">
+                </picture>
 
             </div>
         </section class="reveal">
@@ -529,7 +546,7 @@
 
         <!--RESULTADO FINAL-->
         <section class="reveal">
-            <div class="screens flex-column">
+            <div class="screens flex-column" id="resultado">
 
                 <div class="app__result flex-column">
                     <h2>PREPHIRE · RESULTADO FINAL</h2>
