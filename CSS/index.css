@@ -7,6 +7,11 @@
 }
 
 /*ESTILOS FIJOS*/
+html,
+body {
+    background-color: #F2EDE4;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -110,6 +115,12 @@ html {
 /* / VARIABLES*/
 
 /*CLASES ELEMENTOS*/
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: var(--s-md);
+}
 
 .logo {
     max-width: 10rem;
@@ -267,18 +278,18 @@ header {
         overflow: hidden;
         border-radius: var(--r-sm);
         display: flex;
-       
+
 
         & picture {
             position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 75%;
-        height: 75%;
-        transform: translate(-50%, -50%);
-        display: block;
-        border-radius: 50%;
-        overflow: hidden;
+            top: 50%;
+            left: 50%;
+            width: 75%;
+            height: 75%;
+            transform: translate(-50%, -50%);
+            display: block;
+            border-radius: 50%;
+            overflow: hidden;
 
 
             & img {
@@ -405,7 +416,7 @@ header {
     max-width: 100%;
 
     & .foto {
-        background-color: var(--c-gray);
+        background-color: #F2EDE4;
         border-radius: var(--r-sm);
         width: 100%;
         max-width: 31rem;
@@ -785,7 +796,7 @@ header {
                 background-color: var(--c-pink);
                 padding: var(--s-xs) var(--s-sm);
                 border-radius: var(--r-xl);
-                font: vaR(--f-body)
+                font: vaR(--f-body);
             }
         }
 
@@ -894,6 +905,7 @@ header {
 
 /*UI KIT*/
 .components {
+
     & .components-content {
         flex-wrap: wrap;
         gap: var(--s-md);
@@ -904,12 +916,124 @@ header {
         & .components-info {
 
             flex: 1;
-            width: 250px;
+            max-width: 100%;
             height: auto;
             gap: var(--s-md);
             position: sticky;
             top: 40px;
+
+            & .info__tools {
+                gap: var(--s-md);
+                flex-wrap: wrap;
+
+                & span {
+                    background-color: var(--c-orange);
+                    color: var(--c-white);
+                    font: var(--f-span);
+                    padding: var(--s-xs) var(--s-sm);
+                    border-radius: var(--r-xl);
+                }
+
+            }
         }
+
+
+        & .components-image {
+            flex: 1;
+            max-width: 100%;
+            height: auto;
+            gap: var(--s-md);
+
+            & .source__image {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(200px, 1fr));
+                gap: var(--s-md);
+
+                & picture {
+                    &.wide {
+                        grid-column: 1 / -1;
+                    }
+                }
+            }
+
+            & img {
+
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: var(--r-sm);
+                object-fit: cover;
+            }
+        }
+
+        & .findings {
+            gap: var(--s-md);
+
+            & h3 {
+                font: var(--f-l);
+            }
+
+            & .findings__list {
+                gap: var(--s-sm);
+
+                & .findings__items {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: start;
+                    justify-content: start;
+                    gap: var(--s-xs);
+
+                    & i {
+                        flex-shrink: 0;
+                        font: var(--f-body);
+                        color: var(--c-blue);
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+}
+
+
+.components {
+
+    & .content__reverse {
+        flex-wrap: wrap-reverse;
+        gap: var(--s-md);
+        margin-top: var(--s-sm);
+        align-items: start;
+        justify-content: center;
+
+        & .components-info {
+
+
+            flex: 1;
+            max-width: 100%;
+            height: auto;
+            gap: var(--s-md);
+            position: sticky;
+            top: 40px;
+
+
+            & .info__tools {
+                gap: var(--s-md);
+                flex-wrap: wrap;
+
+                & span {
+                    background-color: var(--c-orange);
+                    color: var(--c-white);
+                    font: var(--f-span);
+                    padding: var(--s-xs) var(--s-sm);
+                    border-radius: var(--r-xl);
+                }
+
+            }
+        }
+
 
         & .components-image {
             max-width: 100%;
@@ -924,10 +1048,105 @@ header {
             }
         }
 
+        & .findings {
+            gap: var(--s-md);
 
+            & h3 {
+                font: var(--f-l);
+            }
+
+            & .findings__list {
+                gap: var(--s-sm);
+
+                & .findings__items {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: start;
+                    justify-content: start;
+                    gap: var(--s-xs);
+
+                    & i {
+                        flex-shrink: 0;
+                        font: var(--f-body);
+                        color: var(--c-blue);
+                    }
+
+                }
+            }
+
+        }
 
     }
+
 }
+
+& .title {
+    & span {
+        font: var(--f-link);
+        color: var(--c-blue);
+    }
+}
+
+/*FASE DE DISEÑO*/
+.design {
+
+    & .design-content {
+        flex-wrap: wrap;
+        gap: var(--s-md);
+        margin-top: var(--s-sm);
+        align-items: center;
+        justify-content: center;
+
+        & .title{
+            & h2{
+                font: var(--f-xl);
+            }
+        }
+
+        & .design-info {
+            flex: 1;
+            max-width: 100%;
+            height: auto;
+            gap: var(--s-md);
+
+            & .info__design {
+                gap: var(--s-md);
+                flex-wrap: wrap;
+
+                & span {
+                    background-color: var(--c-orange);
+                    color: var(--c-white);
+                    font: var(--f-span);
+                    padding: var(--s-xs) var(--s-sm);
+                    border-radius: var(--r-xl);
+                }
+
+            }
+        }
+
+
+        & .design-image {
+            flex: 1;
+            max-width: 100%;
+            height: auto;
+            gap: var(--s-md);
+
+            & img {
+
+                width: 100%;
+                max-height: 480px;
+                height: auto;
+                display: block;
+                border-radius: var(--r-sm);
+                object-fit: cover;
+            }
+        }
+
+    }
+
+}
+
+/*FASE DE DISEÑO*/
 
 /* / UI KIT*/
 
@@ -1078,6 +1297,13 @@ footer {
     p {
         font: var(--f-mobile);
         line-height: 1.6;
+    }
+
+
+    ul {
+        li {
+            font: var(--f-mobile);
+        }
     }
 
     span {
@@ -1235,6 +1461,30 @@ footer {
                 position: static;
                 top: 0;
 
+            }
+        }
+    }
+
+    .components {
+        & .components-content {
+            flex-wrap: wrap;
+
+            & .components-info {
+                position: static;
+                flex: 1 1 100%;
+            }
+
+            & .components-image {
+                flex: 1 1 100%;
+            }
+        }
+    }
+
+    .components {
+        & .content__reverse {
+            & .components-info {
+                position: static;
+                top: 0;
             }
         }
     }
