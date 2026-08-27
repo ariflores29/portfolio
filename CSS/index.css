@@ -80,6 +80,7 @@ html {
     /*Fuentes*/
     --f-xl: 500 clamp(3rem, 6vw, 5rem) "instrument serif", sans-serif;
     --f-l: 500 2.30em "inter", sans-serif;
+    --f-md: 450 2.15em "instrument serif", sans-serif;
     --f-body: 400 1.30rem "inter", sans-serif;
     --f-link: 500 1.25em "inter", sans-serif;
     --f-btn: 500 1.25em "inter", sans-serif;
@@ -231,10 +232,10 @@ header {
 .banner__background {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     max-width: 100%;
-    padding: var(--s-l);
+    padding: var(--s-md);
     background: radial-gradient(ellipse at center,
             #f8d3dc 0%,
             #ffe2e9 35%,
@@ -245,6 +246,7 @@ header {
     gap: var(--s-md);
 
     & .banner__content {
+       
         flex: 1 1 50%;
         flex-wrap: wrap;
         align-items: start;
@@ -810,9 +812,76 @@ header {
 
 /* / BANNER PREPHIRE*/
 
+/*PROBLEMA Y OBJETIVO*/
+
+& .problem__container{
+    gap: var(--s-md);
+    & .problem__content{
+        gap:var(--s-sm);
+    }
+
+    & .problems{
+        flex-wrap: wrap;
+        gap: var(--s-md);
+        justify-content: center;
+        
+        & .problem__orientation{
+             background: linear-gradient(135deg, #e06714 0%, #F2EDE4 60%);
+            max-width: 280px;
+            padding: var(--s-md);
+            border-radius: var(--r-sm);
+            gap: var(--s-sm);
+
+            & h3{
+                font: var(--f-md);
+            }
+        }
+        & .problem__realism{
+            background: radial-gradient(circle, #e06714 0%, #F2EDE4 100%);
+            width: 300px;
+            padding: var(--s-md);
+            border-radius: var(--r-sm);
+            gap: var(--s-sm);
+
+            & h3{
+                font: var(--f-md);
+            }
+        }
+        & .problem__insecurity{
+            background: linear-gradient(310deg, #e06714 0%, #F2EDE4 60%);
+            width: 300px;
+            padding: var(--s-md);
+            border-radius: var(--r-sm);
+            gap: var(--s-sm);
+
+            & h3{
+                font: var(--f-md);
+            }
+        }
+
+        & .problem__target{
+            background: var(--c-blue);
+            width: 300px;
+            padding: var(--s-md);
+            border-radius: var(--r-sm);
+            gap: var(--s-sm);
+
+            & p{
+                color: var(--c-white);
+            }
+
+            & h3{
+                font: var(--f-md);
+                color: var(--c-white);
+            }
+        }
+    }
+}
 
 
 
+
+/*PROBLEMA Y OBJETIVO*/
 
 
 /* / SUB-NAV*/
@@ -1593,7 +1662,7 @@ footer {
             
             & a {
               
-                font: var(--f-span);
+                font-size: .5rem;
             }
         }
     }
