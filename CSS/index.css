@@ -246,7 +246,7 @@ header {
     gap: var(--s-md);
 
     & .banner__content {
-       
+
         flex: 1 1 50%;
         flex-wrap: wrap;
         align-items: start;
@@ -814,63 +814,66 @@ header {
 
 /*PROBLEMA Y OBJETIVO*/
 
-& .problem__container{
+& .problem__container {
     gap: var(--s-md);
-    & .problem__content{
-        gap:var(--s-sm);
+
+    & .problem__content {
+        gap: var(--s-sm);
     }
 
-    & .problems{
+    & .problems {
         flex-wrap: wrap;
         gap: var(--s-md);
         justify-content: center;
-        
-        & .problem__orientation{
-             background: linear-gradient(135deg, #e06714 0%, #F2EDE4 60%);
+
+        & .problem__orientation {
+            background: linear-gradient(135deg, #e06714 0%, #F2EDE4 60%);
             max-width: 280px;
             padding: var(--s-md);
             border-radius: var(--r-sm);
             gap: var(--s-sm);
 
-            & h3{
+            & h3 {
                 font: var(--f-md);
             }
         }
-        & .problem__realism{
+
+        & .problem__realism {
             background: radial-gradient(circle, #e06714 0%, #F2EDE4 100%);
             width: 300px;
             padding: var(--s-md);
             border-radius: var(--r-sm);
             gap: var(--s-sm);
 
-            & h3{
+            & h3 {
                 font: var(--f-md);
             }
         }
-        & .problem__insecurity{
+
+        & .problem__insecurity {
             background: linear-gradient(310deg, #e06714 0%, #F2EDE4 60%);
             width: 300px;
             padding: var(--s-md);
             border-radius: var(--r-sm);
             gap: var(--s-sm);
 
-            & h3{
+            & h3 {
                 font: var(--f-md);
             }
         }
 
-        & .problem__target{
+        & .problem__target {
             background: var(--c-blue);
             width: 300px;
             padding: var(--s-md);
             border-radius: var(--r-sm);
             gap: var(--s-sm);
 
-            & p{
+            & p {
                 color: var(--c-white);
             }
 
-            & h3{
+            & h3 {
                 font: var(--f-md);
                 color: var(--c-white);
             }
@@ -1659,12 +1662,32 @@ footer {
 
         & .project-subnav__list {
 
-            
+
             & a {
-              
+
                 font-size: .5rem;
             }
         }
+    }
+
+    .design {
+
+        & .design-content {
+
+            & .design-info {
+                flex: auto;
+                min-width: 0;
+            }
+
+            & .design__image {
+
+                flex: auto;
+                min-width: 0;
+
+            }
+
+        }
+
     }
 
 
